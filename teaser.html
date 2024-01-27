@@ -5,23 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>yerin cafe</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="./popup.js"></script>
     <style>
-        .footer {
-            position: fixed; 
-            bottom: 0; 
-            }
-    </style>
+      *,
+      body,
+      main {
+          width: 100%;
+          height: auto;
+          padding: 0;
+          margin: 0;
+      }
+    
+      .footer {
+          position: fixed; 
+          bottom: 0; 
+      }
+
+      /* .main-img.active {
+        filter: brightness(30%);
+      } */
+
+      .popup {
+        display: none;
+      }
+      
+      .popup.active {
+          width: 80%;
+          position: fixed;
+          z-index: 10;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; 
+          padding: 15px;
+          padding-top: 1px;
+          background-color: white;
+          border-radius: 15px; 
+          border: 2px solid #7b7a7a;
+      }
+
+      .btn-wrap {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: end;
+      }
+      .btn {
+        color: grey;
+        font-size: 14px;
+        height: 2.5rem;
+        width: 2.5rem;
+        border: none;
+        background: none;
+      }
+    </style> 
+
   </head>
 
   <body>
     <main>
-      <img src="./img/test1.jpg" width="100%" >
-      <img src="./img/test2.jpg" width="100%">
+      <img src="./img/test1.jpg" width="100%" class="main-img active">
+      <!-- <img src="./img/test2.jpg" width="100%"> -->
     </main>
+
+    <div class="popup active">
+      <div class="btn-wrap">
+        <button class="btn">닫기</button>
+      </div>
+      <img src="./img/test2.jpg" width="100%" class="popup-img">
+    </div>
 
     <div class="footer">
       <img src="./img/footer.jpg" width="100%" >
     </div>
   </body>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </html>
