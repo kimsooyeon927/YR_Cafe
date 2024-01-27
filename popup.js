@@ -5,5 +5,6 @@ $(document).ready(function () {
         console.log('Button clicked');
         $('.popup').removeClass('active');
         $('.main-img').removeClass('active');
+        $('.footer').removeClass('active');
       });
   });

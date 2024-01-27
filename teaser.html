@@ -18,13 +18,18 @@
       }
     
       .footer {
+          filter: brightness(100%);
           position: fixed; 
           bottom: 0; 
       }
 
-      /* .main-img.active {
-        filter: brightness(30%);
-      } */
+      .footer.active {
+          filter: brightness(50%);
+      }
+
+      .main-img.active {
+        filter: brightness(50%);
+      }
 
       .popup {
         display: none;
@@ -69,7 +74,6 @@
   <body>
     <main>
       <img src="./img/test1.jpg" width="100%" class="main-img active">
-      <!-- <img src="./img/test2.jpg" width="100%"> -->
     </main>
 
     <div class="popup active">
@@ -79,8 +83,7 @@
       <img src="./img/test2.jpg" width="100%" class="popup-img">
     </div>
 
-    <div class="footer">
-      <img src="./img/footer.jpg" width="100%" >
-    </div>
+    <img src="./img/footer.jpg" width="100%" class="footer active">
+
   </body>
 </html>
